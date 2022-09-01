@@ -1,4 +1,4 @@
-package itshendson.springbootsandbox;
+package itshendson.springbootsandbox.controller;
 
 import org.springframework.web.bind.annotation.GetMapping;
 
