@@ -1,6 +1,7 @@
 package itshendson.springbootsandbox.controller;
 
 import itshendson.springbootsandbox.entity.Department;
+import itshendson.springbootsandbox.exception.DepartmentNotFoundException;
 import itshendson.springbootsandbox.service.DepartmentService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -42,7 +43,7 @@ public class DepartmentController {
     }
 
     @GetMapping("/departments/{id}")
-    public Department fetchDepartmentById(@PathVariable("id") Long departmentId) {
+    public Department fetchDepartmentById(@PathVariable("id") Long departmentId) throws DepartmentNotFoundException {
         return departmentService.fetchDepartmentById(departmentId);
     }
 
